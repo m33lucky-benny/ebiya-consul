@@ -38,7 +38,7 @@ permalink: /services/
   transition: all 0.3s; 
   width: 80%; 
   height: 70px; 
-  min-height: 140px; 
+  min-height: 50px; 
 }
 .tool-btn small { 
   font-size: 0.85rem; 
