@@ -42,7 +42,9 @@ h1 {
 
   
   <!-- Self-hosted Montserrat -->
-  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
+ <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
+
 
   <!-- Optional Google Fonts fallback (loaded only if local Montserrat fails) -->
   <script>
