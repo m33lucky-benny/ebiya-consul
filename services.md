@@ -96,7 +96,10 @@ permalink: /services/
 
  
 
-<div class="services-hero">...</div>
+<div class="services-hero">
+  <h1>🔍 Test Your Site Free → Get Expert Fixes</h1>
+  <p>Enter YOUR URL in Google's tools → See slow speeds, SEO errors killing rankings → We fix it.</p>
+</div>
 
 <div class="tool-grid">
   <a href="https://pagespeed.web.dev/?hl=en" target="_blank" class="tool-btn" rel="noopener">
