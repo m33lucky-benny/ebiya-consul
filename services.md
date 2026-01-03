@@ -53,7 +53,7 @@ permalink: /services/
 
 <h2>Test Your Site Speed (PageSpeed Insights)</h2>
 <p>Enter your URL. Scores below 90? Your site is "bad" for Google—users bounce, sales drop.</p>
-<iframe src="https://pagespeed.web.dev/?hl=en" class="tool-embed" loading="lazy" title="PageSpeed Insights"></iframe>[web:23]
+<iframe src="https://pagespeed.web.dev/?hl=en" class="tool-embed" loading="lazy" title="PageSpeed Insights"></iframe>
 
 <!-- GTmetrix - Full embed works -->
 <iframe src="https://gtmetrix.com/" class="tool-embed" loading="lazy" title="GTmetrix Speed Test"></iframe>
