@@ -89,7 +89,7 @@ permalink: /services/
 }
 @media (max-width: 768px) { 
   .tool-grid { grid-template-columns: 1fr; gap: 1.5rem; } 
-  .tool-btn { height: 130px; padding: 1.2rem 1.5rem; font-size: 1.15rem; } 
+  .tool-btn { height: 50px; padding: 1.2rem 1.5rem; font-size: 1.15rem; } 
   .cta-section, .clients-section { padding: 0 1rem; } 
 }
 </style>
