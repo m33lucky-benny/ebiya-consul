@@ -1,4 +1,5 @@
-layout: default  # or page if available
+---
+layout: page 
 title: Website Audit & SEO Services
 description: Free tools reveal your site's issues—slow speed, SEO errors, poor rankings. Get expert fixes via contact.
 permalink: /services/
