@@ -37,7 +37,7 @@ permalink: /services/
   box-shadow: 0 8px 25px rgba(255,16,240,0.3); 
   transition: all 0.3s; 
   width: 80%; 
-  height: 100px; 
+  height: 70px; 
   min-height: 140px; 
 }
 .tool-btn small { 
