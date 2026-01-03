@@ -87,4 +87,48 @@ footer p {
   text-align: center;
 }
 
+// ----------------------------------------
+// Contact form button
+// ----------------------------------------
+// Contact form button - matches your neon brand
+.contact-form .submit-btn {
+  padding: 0.9rem 2rem;
+  border: 2px solid var(--primary);
+  border-radius: 999px;  // pill shape
+  background: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-form .submit-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: var(--dark1);
+  box-shadow: 
+    0 0 20px var(--primary),
+    0 0 40px var(--secondary);
+  transform: translateY(-2px);
+}
+
+.contact-form .submit-btn:active {
+  transform: translateY(0);
+}
+
+.contact-form .submit-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+// Center the entire form actions row
+.contact-form .form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 
