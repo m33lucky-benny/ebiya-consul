@@ -1,17 +1,17 @@
 # Site settings
 title: ConsultantDev
-description: Your web development consulting description here
+description: SEO-first websites that Google can understand
 
 # SEO
-author: Your Name
-url: "https://yourdomain.com"
+author: ebiyaSG
+url: "https://consultant.ebiya.sg"
 
 # Local Business Info (for structured data)
 business:
-  name: "ConsultantDev"
+  name: "ebiya.sg"
   address: "123 Main St, New York, NY 10001"
   phone: "+1-555-123-4567"
-  email: "contact@yourdomain.com"
+  email: "bennyyuen@consultant.com"
 
 # Analytics
 google_analytics: "G-XXXXXXXXXX"  # Your GA4 Measurement ID
