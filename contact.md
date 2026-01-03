@@ -6,7 +6,6 @@ permalink: /contact/
 ---
 
 <div class="contact-wrap">
-  <!-- your existing HTML stays exactly the same -->
   <div class="contact-intro">
     <p>
       Looking to improve your search rankings, website performance, or online visibility?
@@ -19,8 +18,13 @@ permalink: /contact/
     </p>
   </div>
 
-  <form id="contact-form" action="https://formspree.io/f/mykgqeew" method="POST" class="contact-form" novalidate>
-    <!-- your existing form fields stay exactly the same -->
+  <form
+    id="contact-form"
+    action="https://formspree.io/f/mykgqeew"
+    method="POST"
+    class="contact-form"
+    novalidate
+  >
     <div class="form-row">
       <div class="form-group">
         <label for="name">
@@ -29,6 +33,7 @@ permalink: /contact/
         </label>
         <input type="text" id="name" name="name" autocomplete="name" required>
       </div>
+
       <div class="form-group">
         <label for="email">
           Email <span class="required" aria-hidden="true">*</span>
@@ -67,17 +72,91 @@ permalink: /contact/
 </div>
 
 <style>
-/* Your existing styles + NEW BUTTON STYLES at the end */
+/* COMPLETE: All layout + your neon pink button */
+.contact-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
 
-/* ... [keep all your existing .contact-wrap through .sr-only styles unchanged] ... */
+.contact-intro p {
+  margin: 0 0 0.75rem 0;
+}
 
-/* NEW: Neon pink submit button matching your theme vars */
-.contact-form .submit-btn {
+.contact-note {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.contact-form {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border, rgba(0,0,0,0.10));
+  border-radius: 12px;
+  background: var(--surface2, rgba(0,0,0,0.02));
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .form-row { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+.form-group {
+  margin: 0 0 0.9rem 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 0.35rem 0;
+  color: var(--text);
+}
+
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--light, #fff);
+  color: var(--dark1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--muted);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+.required { 
+  color: var(--brand-kieron1, #32CD32); 
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;      /* Centers button */
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* NEON PINK BUTTON - matches your CSS vars */
+.submit-btn {
   padding: 0.9rem 2rem;
-  border: 2px solid var(--primary, #FF10F0);  /* Your neon pink */
+  border: 2px solid var(--primary);
   border-radius: 999px;
   background: transparent;
-  color: var(--primary, #FF10F0);
+  color: var(--primary);
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
@@ -86,40 +165,105 @@ permalink: /contact/
   letter-spacing: 0.5px;
 }
 
-.contact-form .submit-btn:hover:not(:disabled) {
-  background: var(--primary, #FF10F0);
-  color: var(--dark1, #0a0a0a);
+.submit-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: var(--dark1);
   box-shadow: 
-    0 0 20px var(--primary, #FF10F0),
-    0 0 40px var(--secondary, #FF006E);
+    0 0 20px var(--primary),
+    0 0 40px var(--secondary);
   transform: translateY(-2px);
 }
 
-.contact-form .submit-btn:active {
+.submit-btn:active {
   transform: translateY(0);
 }
 
-.contact-form .submit-btn[disabled] {
+.submit-btn[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-/* UPDATED: Center button */
-.contact-form .form-actions {
-  display: flex;
-  justify-content: center;  /* NEW: Centers button */
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1rem;
+.form-status {
+  display: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
 }
 
-/* Your existing script stays exactly the same */
+.form-status.success {
+  display: block;
+  background: rgba(50, 205, 50, 0.10);  /* lime green */
+  border: 1px solid var(--brand-kieron1);
+  color: var(--brand-kieron1);
+}
+
+.form-status.error {
+  display: block;
+  background: rgba(176, 0, 32, 0.10);
+  border: 1px solid #b00020;
+  color: #b00020;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>
 
 <script>
-/* Your existing script stays exactly the same */
 (function () {
-  // ... unchanged
+  const form = document.getElementById('contact-form');
+  const statusDiv = document.getElementById('form-status');
+
+  if (!form || !statusDiv) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalBtnText = submitBtn.textContent;
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    statusDiv.style.display = 'none';
+    statusDiv.className = 'form-status';
+    statusDiv.textContent = '';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(response => {
+        if (!response.ok) throw new Error('Form failed');
+        return response.json();
+      })
+      .then(() => {
+        statusDiv.className = 'form-status success';
+        statusDiv.textContent = "Thank you—message received. We'll get back to you soon.";
+        statusDiv.style.display = 'block';
+        form.reset();
+      })
+      .catch(() => {
+        statusDiv.className = 'form-status error';
+        statusDiv.textContent =
+          'Something went wrong. Please try again, or contact us via social media.';
+        statusDiv.style.display = 'block';
+      })
+      .finally(() => {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      });
+  });
 })();
 </script>
