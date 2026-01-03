@@ -1,0 +1,80 @@
+---
+---
+
+@import 'variables';
+@import "navbar";
+
+//-----------------------------------------
+// 2️⃣ Brand colors from _data/settings
+// ----------------------------------------
+:root {
+  --dark1: #0a0a0a;      // Charcoal black (background)
+  --primary: #FF10F0;  // Neon pink
+  --secondary: #FF006E;   // Hot pink
+  --text: #F5F5F0;        // Off-White
+  --surface1: #1a1a1a;    // Dark grey
+  --surface2: #2a2a2a;    // Dark grey variant
+  --border: #333333;      // Grey (borders)
+  --muted: #888888;       // Muted grey (secondary text)
+  --primary2: #2563eb;
+  --dark2: #1f2937;
+  --light: #f9fafb;
+  --brand-kieron1: #32CD32;  // lime green
+  --brand-kieron2: #FF00FF;  // neon pink
+  --brand-kieron3: #00813D;  // subway green
+  --brand-kieron4: #FFD100;  // subway yellow
+}
+// ----------------------------------------
+// 3️⃣ Apply brand colors to elements
+// ----------------------------------------
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--surface1);
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+
+  /* sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+
+main { 
+  flex: 1;
+}
+
+// ----------------------------------------
+// footer elements
+// ----------------------------------------
+
+footer {
+  flex: 0 0 auto;
+  padding-bottom: env(safe-area-inset-bottom);
+
+  border-top: 1px solid var(--muted);
+  box-shadow: 0 -1px 0 rgba(255, 16, 240, 0.4);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: color-mix(in srgb, var(--text) 85%, transparent);
+}
+
+// ----------------------------------------
+// div in content area 
+// ----------------------------------------
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+

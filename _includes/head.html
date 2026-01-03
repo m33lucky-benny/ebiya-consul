@@ -1,0 +1,67 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- Local Business SEO -->
+  <meta name="geo.region" content="US-NY"><!-- Adjust to your region -->
+  <meta name="geo.placename" content="New York"><!-- Your city -->
+  <meta name="geo.position" content="40.7128;-74.0060"><!-- Your coordinates -->
+  
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  
+  <!-- Self-hosted Montserrat -->
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
+
+  <!-- Optional Google Fonts fallback (loaded only if local Montserrat fails) -->
+  <script>
+    (function () {
+      if (!('fonts' in document)) return; // very old browsers just use system fallback
+
+      Promise.race([
+        document.fonts.load('1em "Montserrat"'),
+        new Promise(function (resolve) { setTimeout(function () { resolve([]); }, 800); })
+      ]).then(function (res) {
+        if (res && res.length) return; // local Montserrat loaded
+
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap';
+        document.head.appendChild(l);
+      });
+    })();
+  </script>
+  
+  <!-- Google Analytics (GA4) -->
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+  
+  <!-- Google Tag Manager (optional - if using GTM instead of GA) -->
+  {% if site.google_tag_manager %}
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+dl;f.async=true;f.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','{{ site.google_tag_manager }}');</script>
+  {% endif %}
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/ico" href="{{ '/favicon.ico' | relative_url }}">
+</head>

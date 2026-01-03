@@ -1,0 +1,18 @@
+# Site settings
+title: ConsultantDev
+description: Your web development consulting description here
+
+# SEO
+author: Your Name
+url: "https://yourdomain.com"
+
+# Local Business Info (for structured data)
+business:
+  name: "ConsultantDev"
+  address: "123 Main St, New York, NY 10001"
+  phone: "+1-555-123-4567"
+  email: "contact@yourdomain.com"
+
+# Analytics
+google_analytics: "G-XXXXXXXXXX"  # Your GA4 Measurement ID
+# google_tag_manager: "GTM-XXXXXXX"  # Uncomment if using GTM instead
