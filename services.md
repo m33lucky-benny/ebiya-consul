@@ -12,29 +12,41 @@ permalink: /services/
   text-align: center; 
   color: white; 
 }
+.tool-grid { 
+  display: grid; 
+  gap: 1rem; 
+  margin: 2rem auto; 
+  max-width: 1000px; 
+  justify-items: center; 
+}
 .tool-btn { 
   background: var(--primary, #FF10F0); 
   color: white !important; 
-  padding: 1.2rem 2.5rem; 
+  padding: 1.2rem 2rem; 
   border: none; 
   border-radius: 50px; 
   font-size: 1.3rem; 
   font-weight: bold; 
   text-decoration: none; 
-  display: inline-block; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
   box-shadow: 0 4px 15px rgba(255,16,240,0.4); 
   transition: all 0.3s; 
-  margin: 1rem; 
+  margin: 0.5rem; 
+  min-width: 280px; 
+}
+.tool-btn small { 
+  font-size: 0.85rem; 
+  font-weight: normal; 
+  opacity: 0.9; 
+  margin-top: 0.25rem; 
 }
 .tool-btn:hover { 
   transform: translateY(-2px); 
   box-shadow: 0 8px 25px rgba(255,16,240,0.6); 
   color: white !important; 
-}
-.tool-grid { display: grid; gap: 1rem; margin: 2rem 0; }
-@media (max-width: 768px) { 
-  .tool-grid { grid-template-columns: 1fr; } 
-  .tool-btn { padding: 1rem 2rem; font-size: 1.1rem; margin: 0.5rem; } 
 }
 .cta-btn { 
   background: var(--primary, #FF10F0); 
@@ -48,12 +60,18 @@ permalink: /services/
   display: block; 
   margin: 2rem auto; 
   font-weight: bold; 
+  text-align: center; 
 }
 .cta-btn:hover { 
   box-shadow: 0 0 30px #FF10F0; 
   transform: scale(1.05); 
 }
+@media (max-width: 768px) { 
+  .tool-grid { grid-template-columns: 1fr; } 
+  .tool-btn { padding: 1rem 1.5rem; font-size: 1.1rem; min-width: auto; } 
+}
 </style>
+
 
 <div class="services-hero">
   <h1>🔍 Test Your Site Free → Get Expert Fixes</h1>
