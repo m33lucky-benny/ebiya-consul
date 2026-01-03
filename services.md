@@ -55,9 +55,12 @@ permalink: /services/
 <p>Enter your URL. Scores below 90? Your site is "bad" for Google—users bounce, sales drop.</p>
 <iframe src="https://pagespeed.web.dev/?hl=en" class="tool-embed" loading="lazy" title="PageSpeed Insights"></iframe>[web:23]
 
-<h2>Check Google Errors (URL Inspection)</h2>
-<p>Logs into Search Console (free signup), paste URL—uncover crawl blocks hurting visibility.</p>
-<p>Direct link: <a href="https://search.google.com/search-console/about" target="_blank">Google Search Console</a>[web:27]
+<!-- GTmetrix - Full embed works -->
+<iframe src="https://gtmetrix.com/" class="tool-embed" loading="lazy" title="GTmetrix Speed Test"></iframe>
+
+<!-- Or WebPageTest.org -->
+<a href="https://www.webpagetest.org/" target="_blank" class="tool-btn">🚀 Advanced Speed Test</a>
+
 
 <h2>Ready for Fixes?</h2>
 <p>We optimize speed, SEO, and performance—tailored for Singapore sites like yours.</p>
