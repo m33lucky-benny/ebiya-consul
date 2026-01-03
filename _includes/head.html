@@ -19,6 +19,16 @@
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+  <!-- Google tag (gtag.js) - GA4 Measurement ID: G-XTNWTH95L0 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTNWTH95L0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XTNWTH95L0');
+</script>
+
   
   <!-- Self-hosted Montserrat -->
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
@@ -42,25 +52,7 @@
     })();
   </script>
   
-  <!-- Google Analytics (GA4) -->
-  {% if site.google_analytics %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-  {% endif %}
-  
-  <!-- Google Tag Manager (optional - if using GTM instead of GA) -->
-  {% if site.google_tag_manager %}
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+dl;f.async=true;f.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{ site.google_tag_manager }}');</script>
-  {% endif %}
+
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
