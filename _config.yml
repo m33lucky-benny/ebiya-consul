@@ -16,5 +16,5 @@ business:
   email: "bennyyuen@consultant.com"
 
 # Analytics
-google_analytics: "G-XXXXXXXXXX"  # Your GA4 Measurement ID
+#google_analytics: "G-XXXXXXXXXX"  # Your GA4 Measurement ID
 # google_tag_manager: "GTM-XXXXXXX"  # Uncomment if using GTM instead
