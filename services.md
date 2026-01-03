@@ -14,15 +14,16 @@ permalink: /services/
 }
 .tool-grid { 
   display: grid; 
-  gap: 1rem; 
-  margin: 2rem auto; 
-  max-width: 1000px; 
+  gap: 2rem;  /* Increased space between buttons */
+  margin: 3rem auto; 
+  max-width: 1200px; 
   justify-items: center; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
 }
 .tool-btn { 
   background: var(--primary, #FF10F0); 
   color: white !important; 
-  padding: 1.2rem 2rem; 
+  padding: 1.5rem 2rem;  /* More padding */
   border: none; 
   border-radius: 50px; 
   font-size: 1.3rem; 
@@ -32,21 +33,27 @@ permalink: /services/
   flex-direction: column; 
   align-items: center; 
   text-align: center; 
-  box-shadow: 0 4px 15px rgba(255,16,240,0.4); 
+  box-shadow: 0 8px 25px rgba(255,16,240,0.3);  /* Bigger shadow */
   transition: all 0.3s; 
-  margin: 0.5rem; 
-  min-width: 280px; 
+  min-height: 120px;  /* Equal height */
+  justify-content: center; 
 }
 .tool-btn small { 
   font-size: 0.85rem; 
   font-weight: normal; 
   opacity: 0.9; 
-  margin-top: 0.25rem; 
+  margin-top: 0.5rem; 
 }
 .tool-btn:hover { 
-  transform: translateY(-2px); 
-  box-shadow: 0 8px 25px rgba(255,16,240,0.6); 
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 40px rgba(255,16,240,0.6); 
   color: white !important; 
+}
+.cta-section, .clients-section {
+  max-width: 800px; 
+  margin: 4rem auto; 
+  text-align: center; 
+  padding: 0 2rem; 
 }
 .cta-btn { 
   background: var(--primary, #FF10F0); 
@@ -57,28 +64,36 @@ permalink: /services/
   font-size: 1.4rem; 
   cursor: pointer; 
   transition: all 0.3s; 
-  display: block; 
-  margin: 2rem auto; 
+  display: inline-block; 
+  margin: 2rem 0; 
   font-weight: bold; 
-  text-align: center; 
 }
 .cta-btn:hover { 
   box-shadow: 0 0 30px #FF10F0; 
   transform: scale(1.05); 
 }
+.clients-list {
+  list-style: none; 
+  padding: 0; 
+  max-width: 600px; 
+  margin: 2rem auto; 
+}
+.clients-list li {
+  background: rgba(255,16,240,0.1); 
+  margin: 1rem 0; 
+  padding: 1rem 1.5rem; 
+  border-radius: 10px; 
+  border-left: 4px solid #FF10F0; 
+}
 @media (max-width: 768px) { 
-  .tool-grid { grid-template-columns: 1fr; } 
-  .tool-btn { padding: 1rem 1.5rem; font-size: 1.1rem; min-width: auto; } 
+  .tool-grid { grid-template-columns: 1fr; gap: 1.5rem; } 
+  .tool-btn { padding: 1.2rem 1.5rem; font-size: 1.1rem; } 
+  .cta-section, .clients-section { padding: 0 1rem; } 
 }
 </style>
+<div class="services-hero">...</div>
 
-
-<div class="services-hero">
-  <h1>🔍 Test Your Site Free → Get Expert Fixes</h1>
-  <p>Enter YOUR URL in Google's tools → See slow speeds, SEO errors killing rankings → We fix it.</p>
-</div>
-
-<div class="tool-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+<div class="tool-grid">
   <a href="https://pagespeed.web.dev/?hl=en" target="_blank" class="tool-btn" rel="noopener">
     ⚡ PageSpeed Insights<br><small>Mobile/Desktop Scores</small>
   </a>
@@ -90,14 +105,18 @@ permalink: /services/
   </a>
 </div>
 
-<h2>Ready for Fixes? Singapore SEO Experts</h2>
-<p>We boost Core Web Vitals, fix crawl errors, rank #1 locally.</p>
-<a href="/contact/" class="cta-btn">💰 Free Speed Audit Quote</a>
+<div class="cta-section">
+  <h2>Ready for Fixes? Singapore SEO Experts</h2>
+  <p>We boost Core Web Vitals, fix crawl errors, rank #1 locally.</p>
+  <a href="/contact/" class="cta-btn">💰 Free Speed Audit Quote</a>
+</div>
 
-<h2>Why Clients Choose Us</h2>
-<ul style="max-width: 800px; margin: 0 auto;">
-  <li>✅ PageSpeed 90+ scores guaranteed</li>
-  <li>✅ Google Search Console errors fixed</li>
-  <li>✅ Singapore-local SEO optimized</li>
-  <li>✅ Neon-fast loading sites</li>
-</ul>
+<div class="clients-section">
+  <h2>Why Clients Choose Us</h2>
+  <ul class="clients-list">
+    <li>✅ PageSpeed 90+ scores guaranteed</li>
+    <li>✅ Google Search Console errors fixed</li>
+    <li>✅ Singapore-local SEO optimized</li>
+    <li>✅ Neon-fast loading sites</li>
+  </ul>
+</div>
