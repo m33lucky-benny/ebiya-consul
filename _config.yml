@@ -2,15 +2,17 @@
 title: ConsultantDev
 description: SEO-first websites that Google can understand
 
+url: "https://consultant.ebiya.sg"
+baseurl: ""
+
 # SEO
 author: ebiyaSG
-url: "https://consultant.ebiya.sg"
 
 # Local Business Info (for structured data)
 business:
   name: "ebiya.sg"
-  address: "123 Main St, New York, NY 10001"
-  phone: "+1-555-123-4567"
+  address: "51 Old Airport Rd, Singapore 390051"
+  phone: "+65 8900 2228"
   email: "bennyyuen@consultant.com"
 
 # Analytics
