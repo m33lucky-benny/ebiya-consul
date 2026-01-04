@@ -6,6 +6,7 @@
   "name": {{ site.business.name | jsonify }},
   "image": {{ site.business.image | absolute_url | jsonify }},
   "telephone": {{ site.business.telephone | jsonify }},
+  "emaul": {{ site.business.mail | jsonify }},
   "priceRange": {{ site.business.priceRange | jsonify }},
   "address": {
     "@type": "PostalAddress",
