@@ -23,6 +23,10 @@ business:
     lat: "1.3521"
     lng: "103.8198"
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemaps
+  
 # Analytics
 #google_analytics: "G-XXXXXXXXXX"  # Your GA4 Measurement ID
 # google_tag_manager: "GTM-XXXXXXX"  # Uncomment if using GTM instead
