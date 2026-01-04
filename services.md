@@ -6,6 +6,8 @@ permalink: /services/
 schema: services
 ---
 
+{% include services-schema.html %}
+
 <style>
 /* =========================
    SERVICES PAGE (SCOPED)
