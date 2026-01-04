@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: service
 title: Website Audit & SEO Services
 description: Free tools to reveal slow speed, SEO errors, and Google issues. Get expert fixes via contact.
 permalink: /services/
