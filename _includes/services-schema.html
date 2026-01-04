@@ -6,6 +6,9 @@
   "name": {{ page.title | jsonify }},
   "description": {{ page.description | jsonify }},
   "url": {{ page.url | absolute_url | jsonify }},
+  "image": {{ site.business.image | absolute_url | jsonify }},
+  "telephone": {{ site.business.telephone | jsonify }},
+  "priceRange": {{ site.business.priceRange | jsonify }},
   "address": {
     "@type": "PostalAddress",
     "streetAddress": {{ site.business.address.streetAddress | jsonify }},
