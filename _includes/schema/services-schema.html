@@ -1,24 +1,23 @@
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Website Audit & SEO Services",
-  "url": "{{ site.url }}{{ page.url }}",
-  "description": "{{ page.description }}",
-  "areaServed": {
-    "@type": "Place",
-    "name": "Singapore"
-  },
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "{{ site.business.name }}",
-    "url": "{{ site.url }}"
-  },
-  "serviceType": [
-    "SEO Audit",
-    "Technical SEO",
-    "Website Speed Optimization",
-    "PageSpeed Fix"
-  ]
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://consultant.ebiya.sg/services/#service",
+  "name": "Website Audit & SEO Services",
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "provider": {
+    "@id": "https://consultant.ebiya.sg/#business"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Singapore"
+  },
+  "serviceType": [
+    "SEO Audit",
+    "Technical SEO",
+    "Website Speed Optimization",
+    "PageSpeed Fix"
+  ]
 }
 </script>
