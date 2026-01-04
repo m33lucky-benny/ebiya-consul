@@ -10,19 +10,18 @@ author: ebiyaSG
 
 # Local Business Info (for structured data)
 business:
-  name: "Consultant Dev @Ebiya"
-  phone: "+65-89002228"
+  name: "ebiya.sg"
+  image: "/assets/images/ebiya-logo.webp"
+  telephone: "+65-8900-2228"
   email: "bennyyuen@consultant.com"
+  priceRange: "$$$"
   address:
-    street: "51 Old Airport Rd"
-    locality: "Singapore"
-    region: "SG"
-    postal: "390051"
-    country: "SG"
-  geo:
-    lat: "1.3521"
-    lng: "103.8198"
-
+    streetAddress: "51 Old Airport Road"
+    addressLocality: "Singapore"
+    postalCode: "390051"
+    addressCountry: "SG"
+  url: "https://consultant.ebiya.sg/"
+  
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemaps
