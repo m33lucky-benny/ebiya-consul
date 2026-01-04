@@ -1,1 +1,23 @@
-services-schema.html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://consultant.ebiya.sg/services/#service",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "provider": {
+    "@id": "https://consultant.ebiya.sg/#business"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Singapore"
+  },
+  "serviceType": [
+    "SEO Audit",
+    "Technical SEO",
+    "Website Speed Optimization",
+    "PageSpeed Fix"
+  ]
+}
+</script>
