@@ -1,60 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include services-schema.html  %}
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-</head>
-<body>
-  {% if site.google_tag_manager %}
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  {% endif %}
+---
+layout: default
+---
+ {% include services-schema.html  %}
 
-  {% include navbar.html %}
-
-  <main>
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
-
-  {% include footer.html %}
-
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  
-  <!-- Service Schema JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Service",
-    "name": "{{ page.title }}",
-    "serviceType": "{{ page.serviceType }}",
-    "provider": {
-      "@type": "{{ page.provider.type | default: 'LocalBusiness' }}",
-      "name": "{{ page.provider.name }}"
-    },
-    "areaServed": "{{ page.areaServed }}",
-    "description": "{{ page.description }}"
-  }
-  </script>
-</head>
-<body>
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.description }}</p>
-  {{ content }}
-</body>
-</html>
+<main>
+  <div>
+    {{ content }}
+  </div>
+</main>
