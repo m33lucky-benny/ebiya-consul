@@ -1,7 +1,15 @@
 ---
 layout: default
 ---
-<article class="page">
-  {% if page.title %}<h1 class="post-title">{{ page.title }}</h1>{% endif %}
-  {{ content }}
-</article>
+{% if page.schema == "services" %}
+  {% include schema/services-schema.html %}
+{% endif %}
+
+<main id="content">
+  <article class="page">
+    {% if page.title %}
+      <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
+    {{ content }}
+  </article>
+</main>
