@@ -9,18 +9,17 @@
   "email": "{{ site.business.email }}",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Main St",
-    "addressLocality": "New York",
-    "addressRegion": "NY",
-    "postalCode": "10001",
-    "addressCountry": "US"
+    "streetAddress": "{{ site.business.address.street }}",
+    "addressLocality": "{{ site.business.address.locality }}",
+    "addressRegion": "{{ site.business.address.region }}",
+    "postalCode": "{{ site.business.address.postal }}",
+    "addressCountry": "{{ site.business.address.country }}"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "40.7128",
-    "longitude": "-74.0060"
+    "latitude": "{{ site.business.geo.lat }}",
+    "longitude": "{{ site.business.geo.lng }}"
   },
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-17:00"
+  "priceRange": "$$"
 }
 </script>
