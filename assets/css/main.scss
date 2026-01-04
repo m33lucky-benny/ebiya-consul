@@ -160,9 +160,9 @@ footer p {
   text-align: center; 
   box-shadow: 0 8px 25px rgba(255,16,240,0.3); 
   transition: all 0.3s; 
-  width: 100%;      /* NEW: Full grid cell width */
-  height: 140px;    /* NEW: Fixed equal height */
-  min-height: 140px;
+  width: 80%;      /* NEW: Full grid cell width */
+  height: 70px;    /* NEW: Fixed equal height */
+  min-height: 50px;
 }
 
 
