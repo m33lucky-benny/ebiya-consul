@@ -1,6 +1,89 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="ULsSS9SW0O2t0d76FM20iITO83i9vbTNtTVclZiV7mM">
+
+  <!-- SEO -->
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Local SEO -->
+  <meta name="geo.region" content="SG-SG">
+  <meta name="geo.placename" content="Singapore">
+  <meta name="geo.position" content="1.3081243;103.8857357">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+  <!-- Preconnect (only used if font fallback loads) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Main CSS (non-blocking) -->
+  <link rel="preload"
+        href="{{ '/assets/css/main.css' | relative_url }}"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </noscript>
+
+  <!-- Optional Google Fonts fallback -->
+  <script>
+    (function () {
+      if (!('fonts' in document)) return;
+
+      Promise.race([
+        document.fonts.load('1em "Montserrat"'),
+        new Promise(function (r) { setTimeout(r, 800); })
+      ]).then(function (res) {
+        if (res && res.length) return;
+
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap';
+        document.head.appendChild(l);
+      });
+    })();
+  </script>
+
+  <!-- GA4 (delayed until interaction) -->
+  <script>
+    (function () {
+      var loaded = false;
+      function loadGA() {
+        if (loaded) return;
+        loaded = true;
+
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XTNWTH95L0';
+        s.async = true;
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+
+        gtag('js', new Date());
+        gtag('config', 'G-XTNWTH95L0');
+      }
+
+      ['scroll','mousemove','touchstart'].forEach(function(e){
+        window.addEventListener(e, loadGA, { once: true });
+      });
+    })();
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+
+
 
   <!-- Critical CSS: Fix H1 Deprecation Warning -->
 <!-- <style>
@@ -13,89 +96,13 @@ h1 {
 </style> -->
 
 
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="ULsSS9SW0O2t0d76FM20iITO83i9vbTNtTVclZiV7mM" />
-  
-  <!-- SEO Meta Tags -->
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  
-  <!-- Local Business SEO -->
-  <meta name="geo.region" content="SG-SG"><!-- Adjust to your region -->
-  <meta name="geo.placename" content="Singapore"><!-- Your city -->
-  <meta name="geo.position" content="1.3081243;103.8857357"><!-- Your coordinates -->
-  
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-
-  <!-- Google tag (gtag.js) - GA4 Measurement ID: G-XTNWTH95L0 -->
-  <script>
-(function () {
-  var loaded = false;
-
-  function loadGtag() {
-    if (loaded) return;
-    loaded = true;
-
-    var s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
-    s.async = true;
-    document.head.appendChild(s);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  }
-
-  ['scroll', 'mousemove', 'touchstart'].forEach(function (e) {
-    window.addEventListener(e, loadGtag, { once: true });
-  });
-})();
-</script>
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTNWTH95L0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XTNWTH95L0');
-</script> -->
-
-  
-  <!-- Self-hosted Montserrat -->
- <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"></noscript>
-
-
-  <!-- Optional Google Fonts fallback (loaded only if local Montserrat fails) -->
-  <script>
-    (function () {
-      if (!('fonts' in document)) return; // very old browsers just use system fallback
-
-      Promise.race([
-        document.fonts.load('1em "Montserrat"'),
-        new Promise(function (resolve) { setTimeout(function () { resolve([]); }, 800); })
-      ]).then(function (res) {
-        if (res && res.length) return; // local Montserrat loaded
-
-        var l = document.createElement('link');
-        l.rel = 'stylesheet';
-        l.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap';
-        document.head.appendChild(l);
-      });
-    })();
-  </script>
+ 
   
 
+  
+
   
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/ico" href="{{ '/favicon.ico' | relative_url }}">
-</head>
+ 
