@@ -1,7 +1,7 @@
 # Site settings
 title: ConsultantDev
 description: SEO-first websites that Google can understand
-
+image: "/assets/images/ebiya-logo.webp"
 url: "https://consultant.ebiya.sg"
 baseurl: ""
 
