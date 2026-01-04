@@ -174,14 +174,7 @@ schema: services
       Test your site for free below.
     </p>
 
-    <a
-      href="https://pagespeed.web.dev/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="cta-btn"
-    >
-      Run Free PageSpeed Test
-    </a>
+   
   </div>
 
   <!-- TOOLS -->
