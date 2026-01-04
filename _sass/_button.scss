@@ -1,4 +1,4 @@
-@import "button"
+@import "button",
 
 .btn {
   display: inline-block;
@@ -9,7 +9,7 @@
 
 .btn-primary {
   background: var(--surface1);
-  color: var(--surface1);
+  color: var(--muted);
   margin-right: 0.5rem;
 }
 
