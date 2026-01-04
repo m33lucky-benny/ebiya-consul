@@ -88,7 +88,7 @@ schema: services
   text-align: center;
   box-shadow: 0 8px 25px rgba(255,16,240,0.3);
   transition: all 0.3s;
-  height: 140px;
+  height: 50px;
 }
 
 .tool-btn small {
