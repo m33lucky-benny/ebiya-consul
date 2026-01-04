@@ -237,7 +237,7 @@ schema: services
         </a>
 
         <img
-          src="/assets/images/before-pagespeed.jpg"
+          src="/assets/images/before.png"
           alt="Before optimization: poor PageSpeed score"
           loading="lazy"
         >
@@ -254,7 +254,7 @@ schema: services
         </a>
 
         <img
-          src="/assets/images/after-pagespeed.jpg"
+          src="/assets/images/after.png"
           alt="After optimization: excellent PageSpeed score"
           loading="lazy"
         >
