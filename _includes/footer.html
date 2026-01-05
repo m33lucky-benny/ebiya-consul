@@ -22,7 +22,7 @@
            onclick="if(window.innerWidth < 768){ window.location.href='{{ url }}'; } else { window.open('https://mail.google.com/mail/?view=cm&to={{ url | remove: 'mailto:' }}','_blank'); }"
            aria-label="{{ key }}"
            style="display:flex; align-items:center;">
-          <img src="{{ '/assets/images/' | append: key | append: '.svg' | relative_url }}"
+          <img src="{{ '/assets/footer/' | append: key | append: '.svg' | relative_url }}"
                alt="{{ key }}"
                style="width:18px;height:18px; pointer-events:auto;">
         </a>
