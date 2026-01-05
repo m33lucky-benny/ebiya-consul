@@ -4,7 +4,6 @@
 @import 'variables';
 @import "navbar";
 @import "button";
-@import "whatsapp";
 
 //-----------------------------------------
 // 2️⃣ Brand colors from _data/settings
@@ -165,6 +164,28 @@ footer p {
   width: 80%;      /* NEW: Full grid cell width */
   height: 70px;    /* NEW: Fixed equal height */
   min-height: 50px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25d366;
+  background-image: url('/assets/iocn/wp.svg' );
+  background-image: url("{{ '/assets/icon/whatsapp.svg' | relative_url }}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
 }
 
 
