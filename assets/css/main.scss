@@ -168,24 +168,33 @@ footer p {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: #25d366;
-  background-image: url('/assets/iocn/wp.svg' );
-  background-image: url("{{ '/assets/icon/whatsapp.svg' | relative_url }}");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 28px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  right: 16px;
+  bottom: 16px;
   z-index: 9999;
-  transition: transform 0.2s ease;
+
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background: #25D366;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  text-decoration: none;
 }
 
 .whatsapp-float:hover {
-  transform: translateY(-4px);
+  transform: translateY(-1px);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+.whatsapp-float img {
+  display: block;
 }
 
 
