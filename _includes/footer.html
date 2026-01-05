@@ -3,9 +3,27 @@
   color: {{ site.data.settings.brand.surface1 }};
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  text-align: center;
 ">
-  <p style="margin:0; font-size:0.875rem; line-height:1.2;">
-    © 2026 {{ site.title }}
-  </p>
+  <div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  ">
+    {% for name in site.data.settings.social %}
+      <a href="{{ name[1] }}"
+         aria-label="{{ name[0] }}"
+         style="display:flex; align-items:center;">
+        <img
+          src="{{ '/assets/footer/' | append: name[0] | append: '.svg' | relative_url }}"
+          alt="{{ name[0] }}"
+          style="width:18px;height:18px;"
+        />
+      </a>
+    {% endfor %}
+
+    <p style="margin:0; font-size:0.875rem; line-height:1.2;">
+      © 2026 {{ site.title }}
+    </p>
+  </div>
 </footer>
