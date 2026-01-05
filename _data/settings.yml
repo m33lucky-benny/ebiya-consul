@@ -16,6 +16,11 @@ brand:
   brand_kieron3: "#00813D" # Subway green
   brand_kieron4: "#FFD100" # Subway yellow
 
+social:
+  instagram: "https://instagram.con/ebiyasg"
+  contact: "/contact/"
+  email: "mailto:bennyyuen@consultant.com"
+
 nav_items:
   - title: Home
     url: /
