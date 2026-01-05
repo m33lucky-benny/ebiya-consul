@@ -10,17 +10,22 @@
     justify-content: center;
     gap: 0.6rem;
   ">
-    {% for name in site.data.settings.social %}
-      <a href="{{ name[1] }}"
-         aria-label="{{ name[0] }}"
-         style="display:flex; align-items:center;">
-        <img
-          src="{{ '/assets/footer/' | append: name[0] | append: '.svg' | relative_url }}"
-          alt="{{ name[0] }}"
-          style="width:18px;height:18px;"
-        />
-      </a>
-    {% endfor %}
+    {% for item in site.data.settings.social %}
+  {% assign key = item[0] %}
+  {% assign url = item[1] %}
+
+  <a href="{{ url }}"
+     aria-label="{{ key }}"
+     {% unless key == "email" %}target="_blank" rel="noopener"{% endunless %}
+     style="display:flex; align-items:center;">
+     
+    <img
+      src="{{ '/assets/images/' | append: key | append: '.svg' | relative_url }}"
+      alt="{{ key }}"
+      style="width:18px;height:18px; pointer-events:auto;"
+    />
+  </a>
+{% endfor %}
 
     <p style="margin:0; font-size:0.875rem; line-height:1.2;">
       © 2026 {{ site.title }}
