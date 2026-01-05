@@ -1,7 +1,23 @@
 <a
   id="whatsapp-link"
-  href="#"
   class="whatsapp-float"
   aria-label="Chat on WhatsApp"
   target="_blank"
 ></a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const phone = "6591234567";
+
+    const pageTitle = document.title;
+    const pageUrl = window.location.href;
+
+    const message = `Hi, I have a question about this page:\n${pageTitle}\n${pageUrl}`;
+    const encodedMessage = encodeURIComponent(message);
+
+    const link = document.getElementById("whatsapp-link");
+    if (link) {
+      link.href = `https://wa.me/${phone}?text=${encodedMessage}`;
+    }
+  });
+</script>
