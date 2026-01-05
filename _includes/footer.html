@@ -10,24 +10,36 @@
     justify-content: center;
     gap: 0.6rem;
   ">
-    <p>{{ key }}</p>
     {% for item in site.data.settings.social %}
-    {% assign key = item[0] %}
-    {% assign url = item[1] %}
+      {% assign key = item[0] %}
+      {% assign url = item[1] %}
 
-  <a href="{{ url }}"
-     aria-label="{{ key }}"
-     {% unless key == "email" %}target="_blank" rel="noopener"{% endunless %}
-     style="display:flex; align-items:center;">
-     
-    <img
-      src="{{ '/assets/footer/' | append: key | append: '.svg' | relative_url }}"
-      alt="{{ key }}"
-      style="width:18px;height:18px; pointer-events:auto;"
-    />
-  </a>
-{% endfor %}
+      {% comment %}
+      Check if link is an email
+      {% endcomment %}
+      {% if url contains "mailto:" %}
+        <a href="#"
+           onclick="if(window.innerWidth < 768){ window.location.href='{{ url }}'; } else { window.open('https://mail.google.com/mail/?view=cm&to={{ url | remove: 'mailto:' }}','_blank'); }"
+           aria-label="{{ key }}"
+           style="display:flex; align-items:center;">
+          <img src="{{ '/assets/images/' | append: key | append: '.svg' | relative_url }}"
+               alt="{{ key }}"
+               style="width:18px;height:18px; pointer-events:auto;">
+        </a>
+      {% else %}
+        <a href="{{ url }}"
+           aria-label="{{ key }}"
+           target="_blank"
+           rel="noopener"
+           style="display:flex; align-items:center;">
+          <img src="{{ '/assets/images/' | append: key | append: '.svg' | relative_url }}"
+               alt="{{ key }}"
+               style="width:18px;height:18px; pointer-events:auto;">
+        </a>
+      {% endif %}
+    {% endfor %}
 
+    <!-- Site Title -->
     <p style="margin:0; font-size:0.875rem; line-height:1.2;">
       © 2026 {{ site.title }}
     </p>
