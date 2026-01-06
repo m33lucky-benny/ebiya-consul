@@ -2,7 +2,13 @@
 title: ConsultantDev
 description: SEO-first websites that Google can understand
 image: "/assets/images/ebiya-logo.webp"
-url: "https://consultant.ebiya.sg"
+
+# when using github pages with custom domain
+# url: "https://username.github.io"
+# baseurl: "/repo name"
+# with custom domain baseurl should be empty like  = baseurl: ""
+
+url: "" 
 baseurl: ""
 
 # SEO
