@@ -1,26 +1,41 @@
+# =========================
+# 🎨 BRAND COLORS
+# Used in SCSS via site.data.settings.brand.*
+# =========================
 brand:
-  dark1: "#0a0a0a"        # Charcoal black (background)
-  primary: "#FF10F0"     # Neon pink
-  secondary: "#FF006E"   # Hot pink
-  text: "#F5F5F0"        # Off-White
-  surface1: "#1a1a1a"    # Dark grey
-  surface2: "#2a2a2a"    # Dark grey variant
-  border: "#333333"      # Grey (borders)
-  muted: "#888888"       # Muted grey (secondary text)
-  primary2: "#2563eb"
-  dark2: "#1f2937"
-  light: "#f9fafb"
+  dark1: "#0a0a0a"        # REQUIRED — main background color
+  primary: "#FF10F0"     # REQUIRED — main brand color
+  secondary: "#FF006E"   # OPTIONAL — accent color
+  text: "#F5F5F0"        # REQUIRED — main text color
+  surface1: "#1a1a1a"    # OPTIONAL — cards / navbar background
+  surface2: "#2a2a2a"    # OPTIONAL — alt surface
+  border: "#333333"      # OPTIONAL — borders
+  muted: "#888888"       # OPTIONAL — muted text
 
-  brand_kieron1: "#32CD32" # Lime green
-  brand_kieron2: "#FF00FF" # Neon pink
-  brand_kieron3: "#00813D" # Subway green
-  brand_kieron4: "#FFD100" # Subway yellow
+  # ❌ REMOVE safely if not used in SCSS
+  # primary2: "#2563eb"
+  # dark2: "#1f2937"
+  # light: "#f9fafb"
 
+  # ❌ Brand-specific colors (safe to delete if unused)
+  # brand_kieron1: "#32CD32"
+  # brand_kieron2: "#FF00FF"
+  # brand_kieron3: "#00813D"
+  # brand_kieron4: "#FFD100"
+
+# =========================
+# 🌐 SOCIAL LINKS
+# Used in footer / header includes
+# =========================
 social:
-  instagram: "https://instagram.com/ebiyasg"
-  contact: "/contact/"
-  email: "mailto:bennyyuen@consultant.com"
+  instagram: "https://instagram.com/YOUR_HANDLE" # ← CHANGE
+  contact: "/contact/"                            # ← OK to keep
+  email: "mailto:your@email.com"                  # ← CHANGE
 
+# =========================
+# 🧭 NAVIGATION
+# Used in navbar include
+# =========================
 nav_items:
   - title: Home
     url: /
