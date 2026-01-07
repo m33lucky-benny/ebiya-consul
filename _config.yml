@@ -1,37 +1,55 @@
-# Site settings
-title: ConsultantDev
-description: SEO-first websites that Google can understand
-image: "/assets/images/ebiya-logo.webp"
+# =========================
+# 🌐 SITE BASICS (REQUIRED)
+# =========================
+title: "Your Site Name"               # 🔴 REQUIRED — shown in browser & SEO
+description: "Short SEO description"  # 🔴 REQUIRED — Google meta description
+image: "/assets/images/logo.webp"     # OPTIONAL — used for SEO / social cards
 
-# when using github pages with custom domain
+# =========================
+# 🌍 DOMAIN SETTINGS
+# =========================
+# For GitHub Pages + custom domain:
+# url: "https://yourdomain.com"
+# baseurl: ""        # MUST be empty when using custom domain
+
+# For GitHub Pages sub-repo:
 # url: "https://username.github.io"
-# baseurl: "/repo name"
-# with custom domain baseurl should be empty like  = baseurl: ""
+# baseurl: "/repo-name"
 
-url: "" 
-baseurl: ""
+url: "https://username.github.io"              # 🔴 REQUIRED — fill before production
+baseurl: "repo name"          # 🔴 Leave empty unless using sub-repo
 
-# SEO
-author: ebiyaSG
+# =========================
+# ✍️ AUTHOR / SEO
+# =========================
+author: ""           # OPTIONAL — used by jekyll-seo-tag
 
-# Local Business Info (for structured data)
+# =========================
+# 🏢 LOCAL BUSINESS (SCHEMA)
+# Used for Google rich results
+# =========================
 business:
-  name: "ebiya.sg"
-  image: "/assets/images/ebiya-logo.webp"
-  telephone: "+65-8900-2228"
-  email: "bennyyuen@consultant.com"
-  priceRange: "$$$"
+  name: "Your Business Name"          # 🔴 REQUIRED for schema
+  image: "/assets/images/logo.webp"
+  telephone: "+65-XXXXXXXX"            # 🔴 REQUIRED
+  email: "hello@yourdomain.com"        # 🔴 REQUIRED
+  priceRange: "$$"                     # OPTIONAL ($, $$, $$$)
   address:
-    streetAddress: "51 Old Airport Road"
-    addressLocality: "Singapore"
-    postalCode: "390051"
-    addressCountry: "SG"
-  url: "https://consultant.ebiya.sg/"
-  
+    streetAddress: ""                  # OPTIONAL
+    addressLocality: ""                # OPTIONAL (City)
+    postalCode: ""                     # OPTIONAL
+    addressCountry: "SG"               # 🔴 REQUIRED (ISO code)
+  url: "/"                             # DO NOT change
+
+# =========================
+# 🔌 PLUGINS (SAFE FOR GH PAGES)
+# =========================
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemaps
-  
-# Analytics
-#google_analytics: "G-XXXXXXXXXX"  # Your GA4 Measurement ID
-# google_tag_manager: "GTM-XXXXXXX"  # Uncomment if using GTM instead
+  - jekyll-sitemap
+
+# =========================
+# 📊 ANALYTICS (OPTIONAL)
+# =========================
+# google_analytics: "G-XXXXXXXXXX"     # GA4 ID
+# google_tag_manager: "GTM-XXXXXXX"    # Use instead of GA if needed
