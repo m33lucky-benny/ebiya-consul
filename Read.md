@@ -1,3 +1,17 @@
+first go setting enable page, deply from main
+make changes to 
+- _data/setting
+- _include/navbar
+    /whatsapp
+- _sass
+- assets
+- llms
+- robots
+- sitemap
+- _config
+
+
+
 Here’s what you need to know:
 
 ⸻
