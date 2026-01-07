@@ -1,3 +1,10 @@
+/**
+ * Mobile navigation toggle
+ * - Handles hamburger open/close
+ * - Updates aria-expanded for accessibility
+ * - Closes menu on outside click or link click
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
