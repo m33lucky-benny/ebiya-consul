@@ -1,200 +1,34 @@
 ---
+# Jekyll front matter to allow Sass processing
 ---
 
-@import 'variables';
-@import "navbar";
-@import "button";
+/* ===================================
+   1. Base: variables, reset, typography, layout
+=================================== */
+@use "../sass/base/variables" as vars;
+@use "../sass/base/reset" as reset;
+@use "../sass/base/typography" as type;
+@use "../sass/base/layout" as layout;
 
-//-----------------------------------------
-// 2️⃣ Brand colors from _data/settings
-// ----------------------------------------
-:root {
-  --dark1: #0a0a0a;      // Charcoal black (background)
-  --primary: #FF10F0;  // Neon pink
-  --secondary: #FF006E;   // Hot pink
-  --text: #F5F5F0;        // Off-White
-  --surface1: #1a1a1a;    // Dark grey
-  --surface2: #2a2a2a;    // Dark grey variant
-  --border: #333333;      // Grey (borders)
-  --muted: #888888;       // Muted grey (secondary text)
-  --primary2: #2563eb;
-  --dark2: #1f2937;
-  --light: #f9fafb;
-  --brand-kieron1: #32CD32;  // lime green
-  --brand-kieron2: #FF00FF;  // neon pink
-  --brand-kieron3: #00813D;  // subway green
-  --brand-kieron4: #FFD100;  // subway yellow
-}
-// ----------------------------------------
-// 3️⃣ Apply brand colors to elements
-// ----------------------------------------
+/* ===================================
+   2. Utilities/helpers
+=================================== */
+@use "../sass/utilities/helpers" as helpers;
 
-html, body {
-  height: 100%;
-}
+/* ===================================
+   3. Components: buttons, forms
+=================================== */
+@use "../sass/components/buttons" as buttons;
+@use "../sass/components/forms" as forms;
 
-body {
-  background: var(--surface1);
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: var(--text);
+/* ===================================
+   4. Sections: page blocks
+=================================== */
+@use "../sass/sections/hero" as hero;
 
-  /* sticky footer */
-  display: flex;
-  flex-direction: column;
-  min-height: 100svh;
-  min-height: 100dvh;
-}
-
-main { 
-  flex: 1;
-}
-
-// ----------------------------------------
-// footer elements
-// ----------------------------------------
-
-footer {
-  flex: 0 0 auto;
-  padding-bottom: env(safe-area-inset-bottom);
-
-  border-top: 1px solid var(--muted);
-  box-shadow: 0 -1px 0 rgba(255, 16, 240, 0.4);
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.2;
-  color: color-mix(in srgb, var(--text) 85%, transparent);
-}
-
-// ----------------------------------------
-// div in content area 
-// ----------------------------------------
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-// ----------------------------------------
-// center layout/page - titles
-// ----------------------------------------
-.page .contact-intro {
-  text-align: center;
-}
-
-.page .post-title {
-  text-align: center;
-}
-
-// ----------------------------------------
-// Contact form button
-// ----------------------------------------
-// Contact form button - matches your neon brand
-.contact-form .submit-btn {
-  padding: 0.9rem 2rem;
-  border: 2px solid var(--primary);
-  border-radius: 999px;  // pill shape
-  background: transparent;
-  color: var(--primary);
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.contact-form .submit-btn:hover:not(:disabled) {
-  background: var(--primary);
-  color: var(--dark1);
-  box-shadow: 
-    0 0 20px var(--primary),
-    0 0 40px var(--secondary);
-  transform: translateY(-2px);
-}
-
-.contact-form .submit-btn:active {
-  transform: translateY(0);
-}
-
-.contact-form .submit-btn[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed;
-  box-shadow: none;
-}
-
-// Center the entire form actions row
-.contact-form .form-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-// ----------------------------------------
-// service section
-// ----------------------------------------
-.tool-note {
-  background: rgba(255,16,240,0.1);
-  border-left: 4px solid #FF10F0;
-  padding: 1rem;
-  margin: 1rem 0;
-  color: #888;
-}
-
-.tool-btn { 
-  background: var(--primary, #FF10F0); 
-  color: white !important; 
-  padding: 1.5rem 2rem; 
-  border: none; 
-  border-radius: 50px; 
-  font-size: 1.3rem; 
-  font-weight: bold; 
-  text-decoration: none; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  text-align: center; 
-  box-shadow: 0 8px 25px rgba(255,16,240,0.3); 
-  transition: all 0.3s; 
-  width: 80%;      /* NEW: Full grid cell width */
-  height: 70px;    /* NEW: Fixed equal height */
-  min-height: 50px;
-}
-
-.whatsapp-float {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 9999;
-
-  width: 56px;
-  height: 56px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px;
-  background: #25D366;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-  text-decoration: none;
-}
-
-.whatsapp-float:hover {
-  transform: translateY(-1px);
-}
-
-.whatsapp-float:focus-visible {
-  outline: 2px solid #111;
-  outline-offset: 3px;
-}
-
-.whatsapp-float img {
-  display: block;
-}
-
-
+/* ===================================
+   5. Page-specific or override styles
+   Load last to override any previous rules if needed
+=================================== */
+// @use "../sass/sections/footer" as footer;
+// @use "../sass/sections/features" as features;
