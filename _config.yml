@@ -25,6 +25,13 @@ baseurl: "repo name"          # 🔴 Leave empty unless using sub-repo
 author: ""           # OPTIONAL — used by jekyll-seo-tag
 
 # =========================
+# WhatsApp floating button
+# =========================
+whatsapp:
+  enabled: false        # 🔴 REQUIRED to set, to false to hide everywhere, on page in front matter "whatsapp: false", true to show everywhere
+  phone: "65XXXXXXXX"  # 🔴 REQUIRED if in use. no +, no spaces,
+
+# =========================
 # 🏢 LOCAL BUSINESS (SCHEMA)
 # Used for Google rich results
 # =========================
