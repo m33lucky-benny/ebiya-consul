@@ -1,34 +1,33 @@
 ---
-# Jekyll front matter to allow Sass processing
 ---
 
 /* ===================================
    1. Base: variables, reset, typography, layout
 =================================== */
-@use "../sass/base/variables" as vars;
-@use "../sass/base/reset" as reset;
-@use "../sass/base/typography" as type;
-@use "../sass/base/layout" as layout;
+@import "../sass/base/variables";
+@import "../sass/base/reset" reset;
+@import "../sass/base/typography";
+@import "../sass/base/layout";
 
 /* ===================================
    2. Utilities/helpers
 =================================== */
-@use "../sass/utilities/helpers" as helpers;
+@import "../sass/utilities/helpers";
 
 /* ===================================
    3. Components: buttons, forms
 =================================== */
-@use "../sass/components/buttons" as buttons;
-@use "../sass/components/forms" as forms;
+@import "../sass/components/buttons";
+@import "../sass/components/forms";
 
 /* ===================================
    4. Sections: page blocks
 =================================== */
-@use "../sass/sections/hero" as hero;
+@import "../sass/sections/hero";
 
 /* ===================================
    5. Page-specific or override styles
    Load last to override any previous rules if needed
 =================================== */
-// @use "../sass/sections/footer" as footer;
-// @use "../sass/sections/features" as features;
+// @import "../sass/sections/footer";
+// @import "../sass/sections/features";
