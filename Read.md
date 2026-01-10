@@ -1,5 +1,7 @@
-first go setting enable page, deply from main
-make changes to 
+1- first go **Settings** enable *pages*, **Build and deployment** chose deply from *main*
+then make changes to
+
+2- _config, in url **Section** change *url*
 - _data/setting
 - _include/navbar
     /whatsapp
@@ -8,7 +10,7 @@ make changes to
 - llms
 - robots
 - sitemap
-- _config
+
 
 
 
