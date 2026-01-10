@@ -1,10 +1,11 @@
-1- first go **Settings** enable *pages*, **Build and deployment** chose deply from *main*
+1 - first go **Settings** enable *pages*, **Build and deployment** chose deply from ___main___
 then make changes to
 
-2- _config, in url **Section** change *url*
+2 - **_config**, in url **Section** change ___url___
+3 - for **WhatsApp** set to ___true___ of ___false___ in _config
+4 - **_data/setting** for 🌐 SOCIAL LINKS and  🧭 NAVIGATION used in ___navbar___
 - _data/setting
 - _include/navbar
-    /whatsapp
 - _sass
 - assets
 - llms
