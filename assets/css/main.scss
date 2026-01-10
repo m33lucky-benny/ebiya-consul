@@ -4,26 +4,28 @@
 /* ===================================
    1. Base: variables, reset, typography, layout
 =================================== */
-@import "../sass/base/variables";
-@import "../sass/base/reset" reset;
-@import "../sass/base/typography";
-@import "../sass/base/layout";
+@import "base/variables";
+@import "base/reset";
+@import "base/typography";
+@import "base/layout";
 
 /* ===================================
    2. Utilities/helpers
 =================================== */
-@import "../sass/utilities/helpers";
+@import "utilities/helpers";
 
 /* ===================================
    3. Components: buttons, forms
 =================================== */
-@import "../sass/components/buttons";
-@import "../sass/components/forms";
+@import "components/navbar";
+@import "components/buttons";
+@import "components/forms";
 
 /* ===================================
    4. Sections: page blocks
 =================================== */
-@import "../sass/sections/hero";
+@import "sections/hero";
+
 
 /* ===================================
    5. Page-specific or override styles
